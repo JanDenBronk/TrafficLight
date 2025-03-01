@@ -16,12 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="yMd-aK-qNn">
-                                <rect key="frame" x="121" y="79" width="151" height="556"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="sTQ-c5-c81">
+                                <rect key="frame" x="121" y="99" width="151" height="556"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cb-3D-3i3">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="150"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6cb-3D-3i3" secondAttribute="height" multiplier="151:150" id="hxh-Cu-9HH"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-da-UnU">
                                         <rect key="frame" x="0.0" y="203" width="151" height="150"/>
@@ -32,17 +35,15 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="556" id="5b5-Cl-536"/>
-                                    <constraint firstItem="Mlg-da-UnU" firstAttribute="top" secondItem="yMd-aK-qNn" secondAttribute="top" constant="203" id="Jhd-yr-Ejg"/>
-                                    <constraint firstItem="Mlg-da-UnU" firstAttribute="centerY" secondItem="yMd-aK-qNn" secondAttribute="centerY" id="R78-2g-zdx"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-fY-lLd">
-                                <rect key="frame" x="146" y="756" width="101" height="42"/>
+                                <rect key="frame" x="147.66666666666666" y="754" width="97.666666666666657" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START"/>
+                                <buttonConfiguration key="configuration" style="filled" title="START">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWm-pT-Ekh"/>
                                 </connections>
@@ -51,17 +52,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yMd-aK-qNn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="An3-g7-YBj"/>
-                            <constraint firstItem="r6r-fY-lLd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="fIp-fW-nsC"/>
-                            <constraint firstItem="r6r-fY-lLd" firstAttribute="centerX" secondItem="yMd-aK-qNn" secondAttribute="centerX" id="kb6-vW-4dp"/>
-                            <constraint firstItem="yMd-aK-qNn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uUD-bS-O6x"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6r-fY-lLd" secondAttribute="bottom" constant="20" id="uVv-4C-USc"/>
-                            <constraint firstItem="yMd-aK-qNn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yG1-Rd-WOE"/>
+                            <constraint firstItem="r6r-fY-lLd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7BC-e7-fwr"/>
+                            <constraint firstItem="sTQ-c5-c81" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RqR-AC-37z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r6r-fY-lLd" secondAttribute="bottom" constant="20" id="aPc-6Y-DGE"/>
+                            <constraint firstItem="sTQ-c5-c81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="gNk-wa-bQE"/>
+                            <constraint firstItem="sTQ-c5-c81" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.652582" id="xSJ-Ag-8CG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenColor" destination="QJc-5t-rVQ" id="FK9-e6-Z7f"/>
                         <outlet property="redColor" destination="6cb-3D-3i3" id="mh7-v5-yJ6"/>
+                        <outlet property="startButton" destination="r6r-fY-lLd" id="nmE-Ql-Rbc"/>
                         <outlet property="yellowColor" destination="Mlg-da-UnU" id="aRe-lE-2B7"/>
                     </connections>
                 </viewController>
